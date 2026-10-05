@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shahdol Famous Places | Ansh Nayak</title>
+<title>Shahdol Tourism | शाहडोल के प्रसिद्ध स्थल</title>
 
 <style>
 *{
+  box-sizing:border-box;
   margin:0;
   padding:0;
-  box-sizing:border-box;
   font-family:Arial, sans-serif;
 }
 
@@ -19,44 +19,36 @@ html{
 }
 
 body{
-  background:#f4f7f9;
-  color:#222;
+  background:#f4f7fb;
+  color:#17202a;
+  line-height:1.6;
 }
 
 /* HEADER */
 header{
-  min-height:300px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+  background:linear-gradient(135deg,#073b4c,#118ab2);
   color:white;
-  padding:40px 20px;
-
-  background:
-  linear-gradient(#0008,#0008),
-  url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=80")
-  center/cover;
+  text-align:center;
+  padding:28px 15px;
 }
 
 header h1{
-  font-size:45px;
-  margin-bottom:12px;
+  font-size:38px;
+  margin-bottom:8px;
 }
 
 header p{
-  font-size:19px;
-  margin:6px;
+  font-size:17px;
 }
 
 /* NAVBAR */
 nav{
-  background:#082c3c;
-  padding:15px;
-  text-align:center;
   position:sticky;
   top:0;
   z-index:1000;
+  background:#062f3d;
+  padding:12px;
+  text-align:center;
 }
 
 nav a{
@@ -70,76 +62,85 @@ nav a:hover{
   color:#ffd166;
 }
 
-/* CONTAINER */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:30px 18px;
+/* HERO */
+.hero{
+  min-height:430px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:30px;
+  background:
+  linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+  url("https://cdn.s3waas.gov.in/s354229abfcfa5649e7003b83dd4755294/uploads/bfi_thumb/2019072214-rr7mpnv95tv5sq6xwe21cxgia2kb3ms7t3mh1nto0w.jpg")
+  center/cover;
 }
 
-/* INTRO */
-.intro{
-  background:white;
-  padding:25px;
-  border-radius:18px;
-  margin-bottom:30px;
-  box-shadow:0 5px 20px #0002;
-}
-
-.intro h2{
-  color:#123c55;
+.hero h2{
+  font-size:45px;
   margin-bottom:12px;
+}
+
+.hero p{
+  font-size:19px;
+  max-width:750px;
+  margin:auto;
 }
 
 /* SEARCH */
 .search-box{
   text-align:center;
-  margin:30px 0;
+  padding:25px 15px 10px;
 }
 
-.search-box input{
+#search{
   width:90%;
-  max-width:600px;
+  max-width:650px;
   padding:15px;
-  border:2px solid #168aad;
+  border:2px solid #118ab2;
   border-radius:30px;
   font-size:16px;
   outline:none;
 }
 
-/* TITLE */
-.section-title{
-  text-align:center;
-  color:#123c55;
-  margin:40px 0 25px;
-  font-size:32px;
-}
-
-/* FILTER BUTTONS */
+/* FILTER */
 .filters{
   text-align:center;
-  margin-bottom:30px;
+  padding:18px;
 }
 
-.filters button{
+.filter-btn{
   border:none;
-  padding:10px 18px;
+  padding:10px 17px;
   margin:5px;
-  border-radius:25px;
-  background:#168aad;
-  color:white;
+  border-radius:20px;
   cursor:pointer;
+  background:#118ab2;
+  color:white;
   font-weight:bold;
 }
 
-.filters button:hover{
-  background:#0b6479;
+.filter-btn:hover{
+  background:#073b4c;
+}
+
+/* SECTION */
+section{
+  padding:40px 7%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:30px;
+  color:#073b4c;
 }
 
 /* CARDS */
-.grid{
+.cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:25px;
 }
 
@@ -147,97 +148,115 @@ nav a:hover{
   background:white;
   border-radius:18px;
   overflow:hidden;
-  box-shadow:0 5px 20px #0002;
+  box-shadow:0 5px 20px rgba(0,0,0,.12);
   transition:.3s;
 }
 
 .card:hover{
   transform:translateY(-7px);
-  box-shadow:0 10px 25px #0003;
 }
 
 .card img{
   width:100%;
   height:220px;
   object-fit:cover;
-  display:block;
+  cursor:pointer;
 }
 
 .card-content{
-  padding:22px;
+  padding:20px;
+}
+
+.card h3{
+  color:#073b4c;
+  font-size:23px;
+  margin-bottom:8px;
 }
 
 .badge{
   display:inline-block;
-  background:#e3f5f8;
-  color:#126782;
-  padding:5px 11px;
-  border-radius:20px;
-  font-size:13px;
+  background:#ffd166;
+  padding:4px 10px;
+  border-radius:15px;
+  font-size:12px;
+  font-weight:bold;
   margin-bottom:10px;
 }
 
-.card h3{
-  color:#123c55;
-  font-size:23px;
-  margin-bottom:10px;
+.info{
+  margin-top:10px;
+  padding:10px;
+  background:#f1f7fa;
+  border-radius:10px;
+  font-size:14px;
 }
 
-.card p{
-  line-height:1.6;
-  margin-bottom:8px;
-}
-
-.info strong{
-  color:#123c55;
-}
-
-/* BUTTON */
 .map-btn{
   display:inline-block;
-  margin-top:12px;
-  padding:10px 15px;
-  background:#168aad;
+  margin-top:14px;
+  padding:9px 15px;
+  background:#118ab2;
   color:white;
   text-decoration:none;
   border-radius:8px;
   font-weight:bold;
 }
 
-.map-btn:hover{
-  background:#0b6479;
-}
-
 /* ABOUT */
 .about{
   background:white;
-  padding:30px;
   border-radius:18px;
-  box-shadow:0 5px 20px #0002;
+  padding:25px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+/* MODAL */
+#photoModal{
+  display:none;
+  position:fixed;
+  z-index:2000;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+#photoModal img{
+  max-width:95%;
+  max-height:90vh;
+  border-radius:12px;
+}
+
+.close{
+  position:absolute;
+  top:15px;
+  right:30px;
+  color:white;
+  font-size:42px;
+  cursor:pointer;
 }
 
 /* FOOTER */
 footer{
-  background:#082c3c;
+  background:#062f3d;
   color:white;
   text-align:center;
-  padding:30px;
-  margin-top:40px;
+  padding:30px 15px;
+  margin-top:30px;
 }
 
-footer strong{
+footer a{
   color:#ffd166;
 }
 
-/* MOBILE */
 @media(max-width:600px){
-
   header h1{
-    font-size:31px;
+    font-size:28px;
   }
 
-  header p{
-    font-size:16px;
+  .hero h2{
+    font-size:32px;
   }
 
   nav a{
@@ -245,564 +264,447 @@ footer strong{
     margin:5px;
     font-size:14px;
   }
-
-  .card img{
-    height:200px;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <div>
-    <h1>🌿 शाहडोल के प्रसिद्ध स्थान</h1>
-    <p>Shahdol Famous Places & Their History</p>
-    <p>Created by <strong>Ansh Nayak</strong></p>
-  </div>
+  <h1>🏞️ Shahdol Tourism</h1>
+  <p>शाहडोल के प्रसिद्ध पर्यटन और धार्मिक स्थलों की जानकारी</p>
 </header>
 
-
-<!-- NAVIGATION -->
 <nav>
   <a href="#home">Home</a>
   <a href="#places">Places</a>
-  <a href="#history">History</a>
-  <a href="#about">About</a>
+  <a href="#about">About Shahdol</a>
+  <a href="#sources">Sources</a>
 </nav>
 
+<section class="hero" id="home">
+  <div>
+    <h2>Explore Shahdol</h2>
+    <p>
+      प्राकृतिक सुंदरता, ऐतिहासिक मंदिर, गुफाएँ और धार्मिक स्थल —
+      आइए शाहडोल को करीब से जानें।
+    </p>
+  </div>
+</section>
 
-<div class="container" id="home">
-
-<!-- INTRO -->
-<div class="intro">
-
-  <h2>🏞️ शाहडोल के बारे में</h2>
-
-  <p>
-    शाहडोल मध्य प्रदेश का एक महत्वपूर्ण ऐतिहासिक और प्राकृतिक
-    सुंदरता वाला जिला है। यहाँ प्राचीन मंदिर, धार्मिक स्थल,
-    गुफाएँ, बाँध और प्राकृतिक पर्यटन स्थल हैं।
-  </p>
-
-  <br>
-
-  <p>
-    इस वेबसाइट का उद्देश्य शाहडोल के प्रसिद्ध स्थानों,
-    उनके इतिहास और पर्यटन संबंधी जानकारी को एक जगह उपलब्ध कराना है।
-  </p>
-
-</div>
-
-
-<!-- SEARCH -->
 <div class="search-box">
-
   <input
     type="text"
     id="search"
-    placeholder="🔎 किसी जगह का नाम खोजें..."
+    placeholder="🔎 जगह का नाम खोजें..."
     onkeyup="searchPlaces()"
   >
-
 </div>
 
-
-<!-- PLACES -->
-<h2 class="section-title" id="places">
-  ⭐ शाहडोल के प्रसिद्ध स्थान
-</h2>
-
-
-<!-- FILTER -->
 <div class="filters">
-
-  <button onclick="filterPlaces('all')">
-    सभी
-  </button>
-
-  <button onclick="filterPlaces('historical')">
-    🏛️ ऐतिहासिक
-  </button>
-
-  <button onclick="filterPlaces('religious')">
-    🛕 धार्मिक
-  </button>
-
-  <button onclick="filterPlaces('natural')">
-    🌿 प्राकृतिक
-  </button>
-
+  <button class="filter-btn" onclick="filterPlaces('all')">सभी</button>
+  <button class="filter-btn" onclick="filterPlaces('religious')">धार्मिक</button>
+  <button class="filter-btn" onclick="filterPlaces('historic')">ऐतिहासिक</button>
+  <button class="filter-btn" onclick="filterPlaces('nature')">प्राकृतिक</button>
 </div>
 
+<section id="places">
 
-<div class="grid" id="placeGrid">
+<h2 class="section-title">🌟 शाहडोल के प्रसिद्ध स्थान</h2>
 
+<div class="cards">
 
-<!-- VIRATESHWAR -->
-<div class="card place-card historical religious">
-
+<!-- VIRAT MANDIR -->
+<div class="card place religious historic">
 <img
-src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80"
-alt="Virateshwar Temple">
-
+src="https://cdn.s3waas.gov.in/s354229abfcfa5649e7003b83dd4755294/uploads/bfi_thumb/2019072214-rr7mpnv95tv5sq6xwe21cxgia2kb3ms7t3mh1nto0w.jpg"
+alt="Virat Mandir"
+onclick="openPhoto(this.src)"
+>
 <div class="card-content">
-
-<span class="badge">
-🏛️ ऐतिहासिक • 🛕 धार्मिक
-</span>
-
+<span class="badge">धार्मिक • ऐतिहासिक</span>
 <h3>🛕 विराटेश्वर मंदिर</h3>
-
 <p>
-विराटेश्वर मंदिर सोहागपुर, शाहडोल में स्थित भगवान शिव
-का प्रसिद्ध ऐतिहासिक मंदिर है।
+विराटेश्वर मंदिर भगवान शिव को समर्पित प्रसिद्ध मंदिर है।
+यह सोहागपुर बाणगंगा में स्थित है और कलचुरी काल की
+वास्तुकला का महत्वपूर्ण उदाहरण है।
 </p>
 
-<p class="info">
-<strong>निर्माण:</strong>
-लगभग 950–1050 ईस्वी
-</p>
+<div class="info">
+<b>निर्माण:</b> लगभग 950–1050 ई.<br>
+<b>निर्माता:</b> कलचुरी राजा महाराजा युवराज देव<br>
+<b>ऊँचाई:</b> लगभग 70 फीट
+</div>
 
-<p class="info">
-<strong>निर्माता:</strong>
-कलचुरी राजा महाराजा युवराज देव
-</p>
-
-<a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=Virateshwar+Temple+Shahdol"
-target="_blank">
-📍 Google Maps
-</a>
-
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=Virat+Mandir+Shahdol"
+target="_blank">📍 Map</a>
 </div>
 </div>
 
 
 <!-- PANCHMATHA -->
-<div class="card place-card historical religious">
-
+<div class="card place religious historic">
 <img
-src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80"
-alt="Panchmatha Temple">
-
+src="https://shahdol.nic.in/wp-content/uploads/2019/07/panchmatha.jpg"
+alt="Panchmatha Temple"
+onclick="openPhoto(this.src)"
+onerror="this.src='https://via.placeholder.com/800x500?text=Panchmatha+Temple+Shahdol'"
+>
 <div class="card-content">
-
-<span class="badge">
-🏛️ ऐतिहासिक • 🛕 धार्मिक
-</span>
-
+<span class="badge">धार्मिक • ऐतिहासिक</span>
 <h3>🛕 पंचमठा मंदिर</h3>
-
 <p>
-पंचमठा मंदिर सिंहपुर क्षेत्र का प्रसिद्ध धार्मिक
-और ऐतिहासिक स्थल है।
+सिंहपुर गांव में स्थित पंचमठा मंदिर धार्मिक और
+पुरातात्विक महत्व वाला प्रसिद्ध स्थल है।
 </p>
 
-<p class="info">
-<strong>काल:</strong>
-लगभग 10वीं शताब्दी से संबंधित
-</p>
+<div class="info">
+<b>स्थान:</b> सिंहपुर गांव<br>
+<b>दूरी:</b> शाहडोल से लगभग 15–20 KM<br>
+<b>निर्माण-वर्ष:</b> प्रमाणित जानकारी उपलब्ध नहीं
+</div>
 
-<p class="info">
-<strong>निर्माता:</strong>
-प्रमाणित जानकारी उपलब्ध नहीं
-</p>
-
-<a
-class="map-btn"
+<a class="map-btn"
 href="https://www.google.com/maps/search/?api=1&query=Panchmatha+Temple+Shahdol"
-target="_blank">
-📍 Google Maps
-</a>
-
+target="_blank">📍 Map</a>
 </div>
 </div>
 
 
 <!-- LAKHABARIYA -->
-<div class="card place-card historical">
-
+<div class="card place religious historic">
 <img
-src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"
-alt="Lakhabariya Caves">
-
+src="https://shahdol.nic.in/wp-content/uploads/2019/07/lakhabariya.jpg"
+alt="Lakhabariya Caves"
+onclick="openPhoto(this.src)"
+onerror="this.src='https://via.placeholder.com/800x500?text=Lakhabariya+Caves'"
+>
 <div class="card-content">
-
-<span class="badge">
-🏛️ ऐतिहासिक
-</span>
-
-<h3>🪨 लखबरिया गुफाएँ</h3>
-
+<span class="badge">ऐतिहासिक</span>
+<h3>🪨 लखाबरिया गुफाएँ</h3>
 <p>
-लखबरिया गुफाएँ शाहडोल क्षेत्र का ऐतिहासिक स्थल हैं।
-यहाँ प्राचीन अवशेषों का उल्लेख मिलता है।
+लखाबरिया गुफाएँ शाहडोल के पास स्थित हैं।
+स्थानीय मान्यता के अनुसार इनका संबंध पांडवों के
+वनवास से जोड़ा जाता है।
 </p>
 
-<p class="info">
-<strong>निर्माण-वर्ष:</strong>
-निश्चित जानकारी उपलब्ध नहीं
-</p>
+<div class="info">
+<b>इतिहास:</b> पांडवों से जुड़ी स्थानीय मान्यता<br>
+<b>निर्माण-वर्ष:</b> प्रमाणित जानकारी उपलब्ध नहीं<br>
+<b>प्रकृति:</b> गुफाएँ / ऐतिहासिक स्थल
+</div>
 
-<p class="info">
-<strong>निर्माता:</strong>
-निश्चित जानकारी उपलब्ध नहीं
-</p>
-
-<a
-class="map-btn"
+<a class="map-btn"
 href="https://www.google.com/maps/search/?api=1&query=Lakhabariya+Caves+Shahdol"
-target="_blank">
-📍 Google Maps
-</a>
-
-</div>
-</div>
-
-
-<!-- KSHIR SAGAR -->
-<div class="card place-card natural">
-
-<img
-src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
-alt="Kshir Sagar">
-
-<div class="card-content">
-
-<span class="badge">
-🌿 प्राकृतिक
-</span>
-
-<h3>🌊 क्षीर सागर</h3>
-
-<p>
-क्षीर सागर शाहडोल का प्राकृतिक और मनोरंजक स्थल है।
-यहाँ शांत वातावरण और प्राकृतिक सुंदरता देखने को मिलती है।
-</p>
-
-<p class="info">
-<strong>प्रकार:</strong>
-प्राकृतिक स्थल
-</p>
-
-<p class="info">
-<strong>निर्माण:</strong>
-प्राकृतिक
-</p>
-
-<a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=Kshir+Sagar+Shahdol"
-target="_blank">
-📍 Google Maps
-</a>
-
-</div>
-</div>
-
-
-<!-- SARSI -->
-<div class="card place-card natural">
-
-<img
-src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
-alt="Sarsi Island">
-
-<div class="card-content">
-
-<span class="badge">
-🌿 प्राकृतिक
-</span>
-
-<h3>🏝️ सरसी आइलैंड</h3>
-
-<p>
-सरसी आइलैंड प्राकृतिक सुंदरता और शांत वातावरण के लिए
-जाना जाता है।
-</p>
-
-<p class="info">
-<strong>प्रकार:</strong>
-प्राकृतिक पर्यटन स्थल
-</p>
-
-<p class="info">
-<strong>निर्माण:</strong>
-प्राकृतिक
-</p>
-
-<a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=Sarsi+Island+Shahdol"
-target="_blank">
-📍 Google Maps
-</a>
-
+target="_blank">📍 Map</a>
 </div>
 </div>
 
 
 <!-- BANSAGAR -->
-<div class="card place-card natural">
-
+<div class="card place nature">
 <img
-src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=900&q=80"
-alt="Bansagar Dam">
-
+src="https://cdn.s3waas.gov.in/s354229abfcfa5649e7003b83dd4755294/uploads/bfi_thumb/2019072297-rr7mpnvh4n3mvh6kixazohak8qfd829rzbifngno96.jpg"
+alt="Bansagar Dam"
+onclick="openPhoto(this.src)"
+>
 <div class="card-content">
-
-<span class="badge">
-🌿 प्राकृतिक • बाँध
-</span>
-
-<h3>🌊 बाणसागर बाँध</h3>
-
+<span class="badge">प्राकृतिक • पर्यटन</span>
+<h3>🌊 बाणसागर डैम</h3>
 <p>
-बाणसागर बाँध सोन नदी पर बनी एक महत्वपूर्ण बहुउद्देशीय
-नदी घाटी परियोजना है।
+बाणसागर डैम सोन नदी पर बना एक बहुउद्देशीय
+रिवर वैली प्रोजेक्ट है। यहाँ का जल और आसपास का
+प्राकृतिक दृश्य पर्यटकों को आकर्षित करता है।
 </p>
 
-<p class="info">
-<strong>नदी:</strong>
-सोन नदी
+<div class="info">
+<b>नदी:</b> सोन नदी<br>
+<b>जलविद्युत क्षमता:</b> 435 MW<br>
+<b>निर्माण-वर्ष:</b> इस पेज पर प्रमाणित जानकारी उपलब्ध नहीं
+</div>
+
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=Bansagar+Dam+Shahdol"
+target="_blank">📍 Map</a>
+</div>
+</div>
+
+
+<!-- SARNI / SARSI -->
+<div class="card place nature">
+<img
+src="https://d1xx0c244jch9c.cloudfront.net/wp-content/uploads/2024/12/Untitled-design-50-7.jpg"
+alt="Sarsi Island"
+onclick="openPhoto(this.src)"
+>
+<div class="card-content">
+<span class="badge">प्राकृतिक • Recreational</span>
+<h3>🏝️ सरसी आइलैंड</h3>
+<p>
+सरसी आइलैंड बाणसागर के जल क्षेत्र में स्थित
+एक सुंदर पर्यटन स्थल है। यहाँ प्राकृतिक वातावरण
+और रिसॉर्ट का आनंद लिया जा सकता है।
 </p>
 
-<p class="info">
-<strong>प्रकार:</strong>
-बहुउद्देशीय बाँध
-</p>
+<div class="info">
+<b>प्रकृति:</b> द्वीप / प्राकृतिक पर्यटन<br>
+<b>क्षेत्र:</b> बाणसागर जल क्षेत्र<br>
+<b>निर्माण:</b> प्राकृतिक द्वीप — निर्मित नहीं
+</div>
 
-<a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=Bansagar+Dam"
-target="_blank">
-📍 Google Maps
-</a>
-
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=Sarsi+Island+Shahdol"
+target="_blank">📍 Map</a>
 </div>
 </div>
 
 
 <!-- GHATI DONGRI -->
-<div class="card place-card historical natural">
-
+<div class="card place nature historic">
 <img
-src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
-alt="Ghati Dongri">
-
+src="https://via.placeholder.com/800x500?text=Ghati+Dongri+Shahdol"
+alt="Ghati Dongri"
+onclick="openPhoto(this.src)"
+>
 <div class="card-content">
-
-<span class="badge">
-🏛️ ऐतिहासिक • 🌿 प्राकृतिक
-</span>
-
-<h3>🏞️ घाटी डोंगरी</h3>
-
+<span class="badge">प्राकृतिक • ऐतिहासिक</span>
+<h3>⛰️ घाटी डोंगरी</h3>
 <p>
-घाटी डोंगरी शाहडोल क्षेत्र का प्राकृतिक और ऐतिहासिक
-महत्व वाला स्थान है।
+घाटी डोंगरी एक सुंदर घाटी क्षेत्र है जो
+प्राकृतिक वातावरण और पहाड़ी दृश्यों के लिए जाना जाता है।
 </p>
 
-<p class="info">
-<strong>प्रकार:</strong>
-प्राकृतिक/ऐतिहासिक स्थल
-</p>
+<div class="info">
+<b>स्थान:</b> वंचाछार गांव क्षेत्र<br>
+<b>दूरी:</b> मानपुर से लगभग 13 KM<br>
+<b>निर्माण:</b> प्राकृतिक स्थल
+</div>
 
-<a
-class="map-btn"
+<a class="map-btn"
 href="https://www.google.com/maps/search/?api=1&query=Ghati+Dongri+Shahdol"
-target="_blank">
-📍 Google Maps
-</a>
-
+target="_blank">📍 Map</a>
 </div>
 </div>
 
 
-<!-- BHATHIYA DEVI -->
-<div class="card place-card religious">
-
+<!-- KSHIR SAGAR -->
+<div class="card place nature">
 <img
-src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=900&q=80"
-alt="Bhathiya Devi">
-
+src="https://via.placeholder.com/800x500?text=Kshir+Sagar+Shahdol"
+alt="Kshir Sagar"
+onclick="openPhoto(this.src)"
+>
 <div class="card-content">
-
-<span class="badge">
-🛕 धार्मिक
-</span>
-
-<h3>🛕 भाठिया देवी मंदिर</h3>
-
+<span class="badge">प्राकृतिक • Recreational</span>
+<h3>🌿 क्षीर सागर</h3>
 <p>
-भाठिया देवी मंदिर शाहडोल जिले का प्रसिद्ध धार्मिक
-स्थल है।
+क्षीर सागर शाहडोल से लगभग 22 किलोमीटर दूर
+स्थित प्राकृतिक सुंदरता वाला क्षेत्र है।
 </p>
 
-<p class="info">
-<strong>देवी:</strong>
-माँ सिंहवाहिनी
+<div class="info">
+<b>दूरी:</b> शाहडोल से लगभग 22 KM<br>
+<b>प्रकृति:</b> प्राकृतिक / Scenic Beauty<br>
+<b>निर्माण:</b> प्राकृतिक स्थल
+</div>
+
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=Kshir+Sagar+Shahdol"
+target="_blank">📍 Map</a>
+</div>
+</div>
+
+
+<!-- BHATHIA DEVI -->
+<div class="card place religious">
+<img
+src="https://via.placeholder.com/800x500?text=Bhathia+Devi+Shahdol"
+alt="Bhathia Devi"
+onclick="openPhoto(this.src)"
+>
+<div class="card-content">
+<span class="badge">धार्मिक</span>
+<h3>🙏 भाठिया देवी</h3>
+<p>
+माँ सिंहवाहिनी देवी का प्रसिद्ध मंदिर
+शाहडोल जिले के प्रमुख धार्मिक स्थलों में शामिल है।
 </p>
 
-<p class="info">
-<strong>निर्माण-वर्ष:</strong>
-प्रमाणित जानकारी उपलब्ध नहीं
-</p>
+<div class="info">
+<b>दूरी:</b> शाहडोल मुख्यालय से लगभग 40 KM<br>
+<b>देवी:</b> माँ सिंहवाहिनी<br>
+<b>निर्माण-वर्ष:</b> प्रमाणित जानकारी उपलब्ध नहीं
+</div>
 
-<a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=Bhathiya+Devi+Temple+Shahdol"
-target="_blank">
-📍 Google Maps
-</a>
-
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=Bhathia+Devi+Shahdol"
+target="_blank">📍 Map</a>
 </div>
 </div>
 
 
 <!-- KANKALI -->
-<div class="card place-card religious">
-
+<div class="card place religious">
 <img
-src="https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&w=900&q=80"
-alt="Kankali Temple">
-
+src="https://via.placeholder.com/800x500?text=Kankali+Mandir+Shahdol"
+alt="Kankali Mandir"
+onclick="openPhoto(this.src)"
+>
 <div class="card-content">
-
-<span class="badge">
-🛕 धार्मिक
-</span>
-
+<span class="badge">धार्मिक</span>
 <h3>🛕 कंकाली मंदिर</h3>
-
 <p>
-कंकाली मंदिर शाहडोल जिले के अंतरा गाँव में स्थित
-धार्मिक स्थल है।
+कंकाली मंदिर शाहडोल जिले के अंतरा गांव में
+स्थित प्रमुख धार्मिक स्थल है।
 </p>
 
-<p class="info">
-<strong>स्थान:</strong>
-अंतरा गाँव
-</p>
+<div class="info">
+<b>स्थान:</b> अंतरा गांव<br>
+<b>दूरी:</b> शाहडोल से लगभग 10 KM<br>
+<b>निर्माण-वर्ष:</b> प्रमाणित जानकारी उपलब्ध नहीं
+</div>
 
-<p class="info">
-<strong>निर्माण-वर्ष:</strong>
-प्रमाणित जानकारी उपलब्ध नहीं
-</p>
-
-<a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=Kankali+Temple+Shahdol"
-target="_blank">
-📍 Google Maps
-</a>
-
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=Kankali+Mandir+Shahdol"
+target="_blank">📍 Map</a>
 </div>
 </div>
 
-</div>
 
-
-<!-- HISTORY -->
-<h2 class="section-title" id="history">
-📜 शाहडोल का इतिहास
-</h2>
-
-<div class="intro">
-
-<h2>🏛️ इतिहास</h2>
-
+<!-- BUDHI DEVI -->
+<div class="card place religious historic">
+<img
+src="https://via.placeholder.com/800x500?text=Budhi+Devi+Shahdol"
+alt="Budhi Devi"
+onclick="openPhoto(this.src)"
+>
+<div class="card-content">
+<span class="badge">धार्मिक • ऐतिहासिक</span>
+<h3>🙏 बूढ़ी देवी मंदिर</h3>
 <p>
-शाहडोल मध्य प्रदेश के पूर्वी भाग में स्थित एक ऐतिहासिक जिला है।
-इसके विभिन्न क्षेत्रों में प्राचीन मंदिरों और पुरातात्विक
-अवशेषों का उल्लेख मिलता है।
+बूढ़ी देवी मंदिर शाहडोल जिला मुख्यालय के
+पास उमरिया जिले की सीमा के समीप स्थित है।
+</p>
+
+<div class="info">
+<b>प्रकृति:</b> धार्मिक / ऐतिहासिक<br>
+<b>स्थान:</b> उमरिया सीमा के पास<br>
+<b>निर्माण-वर्ष:</b> प्रमाणित जानकारी उपलब्ध नहीं
+</div>
+
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=Budhi+Devi+Shahdol"
+target="_blank">📍 Map</a>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section id="about">
+
+<h2 class="section-title">📖 शाहडोल के बारे में</h2>
+
+<div class="about">
+<p>
+<strong>शाहडोल</strong> मध्य प्रदेश का एक सुंदर जिला है।
+यह क्षेत्र पहाड़ियों, साल एवं मिश्रित वनों, धार्मिक स्थलों,
+ऐतिहासिक मंदिरों और प्राकृतिक पर्यटन स्थलों के लिए जाना जाता है।
 </p>
 
 <br>
 
 <p>
-शाहडोल क्षेत्र पर विभिन्न राजवंशों का प्रभाव रहा है और
-कलचुरी काल के कई स्थापत्य अवशेष यहाँ महत्वपूर्ण हैं।
+शाहडोल के प्रमुख आकर्षणों में विराटेश्वर मंदिर,
+पंचमठा मंदिर, लखाबरिया गुफाएँ, बाणसागर डैम,
+सरसी आइलैंड, घाटी डोंगरी, क्षीर सागर,
+भाठिया देवी, कंकाली मंदिर और बूढ़ी देवी शामिल हैं।
 </p>
-
-<br>
-
-<p>
-विराटेश्वर मंदिर शाहडोल की ऐतिहासिक विरासत का एक प्रमुख
-उदाहरण है।
-</p>
-
 </div>
 
+</section>
 
-<!-- ABOUT -->
-<h2 class="section-title" id="about">
-ℹ️ About This Website
-</h2>
+
+<section id="sources">
+
+<h2 class="section-title">📚 Official Sources</h2>
 
 <div class="about">
 
 <p>
-<strong>Website Name:</strong>
-Shahdol Famous Places
+यह वेबसाइट तैयार करते समय जानकारी के लिए
+शाहडोल जिला प्रशासन की वेबसाइट का उपयोग किया गया है।
 </p>
 
 <br>
 
 <p>
-<strong>Created By:</strong>
-Ansh Nayak
+🔗 <a href="https://shahdol.nic.in/en/tourist-places/"
+target="_blank">
+Shahdol Official Tourist Places
+</a>
 </p>
 
-<br>
-
 <p>
-<strong>Purpose:</strong>
-शाहडोल के प्रसिद्ध ऐतिहासिक, धार्मिक और प्राकृतिक
-स्थलों की जानकारी लोगों तक पहुँचाना।
+🔗 <a href="https://shahdol.nic.in/en/places-of-interest/"
+target="_blank">
+Shahdol Official Places of Interest
+</a>
 </p>
 
-<br>
+<p>
+🔗 <a href="https://shahdol.nic.in/en/tourist-place/virat-mandir/"
+target="_blank">
+Official Virat Mandir Page
+</a>
+</p>
 
 <p>
-🌿 Explore Shahdol • Know Its History • Visit Shahdol
+🔗 <a href="https://shahdol.nic.in/en/tourist-place/bansagar-dam/"
+target="_blank">
+Official Bansagar Dam Page
+</a>
 </p>
 
 </div>
 
-</div>
+</section>
 
 
-<!-- FOOTER -->
 <footer>
-
-<p>
-© 2026 <strong>Ansh Nayak</strong>
-</p>
-
-<p>
-Shahdol Famous Places
-</p>
-
+<h3>🏞️ Shahdol Tourism</h3>
+<p>Discover • Explore • Experience Shahdol</p>
+<p>Website created by Ansh Nayak</p>
 </footer>
+
+
+<!-- PHOTO MODAL -->
+<div id="photoModal" onclick="closePhoto()">
+<span class="close">&times;</span>
+<img id="largePhoto" src="" alt="Large Photo">
+</div>
 
 
 <script>
 
-/* SEARCH */
+function openPhoto(src){
+  document.getElementById("largePhoto").src = src;
+  document.getElementById("photoModal").style.display = "flex";
+}
+
+function closePhoto(){
+  document.getElementById("photoModal").style.display = "none";
+}
+
 function searchPlaces(){
 
   let input =
-  document.getElementById("search")
-  .value
-  .toLowerCase();
+  document.getElementById("search").value.toLowerCase();
 
   let cards =
-  document.querySelectorAll(".place-card");
+  document.querySelectorAll(".card");
 
   cards.forEach(function(card){
 
@@ -810,37 +712,29 @@ function searchPlaces(){
     card.innerText.toLowerCase();
 
     if(text.includes(input)){
-      card.style.display="block";
-    }
-    else{
-      card.style.display="none";
+      card.style.display = "";
+    }else{
+      card.style.display = "none";
     }
 
   });
-
 }
 
-
-/* FILTER */
 function filterPlaces(category){
 
   let cards =
-  document.querySelectorAll(".place-card");
+  document.querySelectorAll(".card");
 
   cards.forEach(function(card){
 
-    if(category==="all"){
-      card.style.display="block";
+    if(category === "all"){
+      card.style.display = "";
     }
-
-    else if(
-      card.classList.contains(category)
-    ){
-      card.style.display="block";
+    else if(card.classList.contains(category)){
+      card.style.display = "";
     }
-
     else{
-      card.style.display="none";
+      card.style.display = "none";
     }
 
   });
@@ -850,4 +744,4 @@ function filterPlaces(category){
 </script>
 
 </body>
-</html>
+  </html>
